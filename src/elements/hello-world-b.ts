@@ -1,5 +1,5 @@
 import {bindable} from 'aurelia-framework';
 
-export class HelloWorld {
+export class HelloWorldB {
   @bindable public message: string = '';
 }
