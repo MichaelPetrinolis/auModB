@@ -7,7 +7,11 @@ import {buildPluginJavaScript} from './transpile';
 import { CLIOptions } from 'aurelia-cli';
 
 function clean() {
-  return del(['dist/**', '!dist']);
+  if (CLIOptions.hasFlag('watch')) {
+    return Promise.resolve()
+  } else {
+    return del('dist');
+  }
 }
 
 let build = gulp.series(
