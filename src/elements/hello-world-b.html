@@ -1,4 +1,7 @@
 <template>
   <require from="./hello-world-b.css"></require>
-  <h3 class="hello-world-b">Hello world ${message} from ModB</h3>
+  <template replaceable part="content">
+      <p>This part is replaceable.</p>
+      <h3 class="hello-world-b">Hello world ${message} from modB</h3>
+    </template> 
 </template>
